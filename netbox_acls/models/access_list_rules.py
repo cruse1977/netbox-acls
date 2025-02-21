@@ -8,7 +8,7 @@ from django.db import models
 from django.urls import reverse
 from netbox.models import NetBoxModel
 
-from ..choices import ACLProtocolChoices, ACLRuleActionChoices, ACLTypeChoices
+from ..choices import ACLProtocolChoices, ACLRuleActionChoices, ACLTypeChoices, LoggingChoices
 from .access_lists import AccessList
 
 __all__ = (
@@ -150,6 +150,12 @@ class ACLExtendedRule(ACLRule):
         blank=True,
         choices=ACLProtocolChoices,
         max_length=30,
+    )
+
+    logging = models.CharField(
+        choices=LoggingChoices,
+        max_length=30,
+        blank=True
     )
 
     def get_absolute_url(self):

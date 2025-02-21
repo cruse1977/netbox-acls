@@ -195,6 +195,7 @@ class ACLExtendedRuleTable(NetBoxTable):
             "destination_prefix",
             "destination_ports",
             "protocol",
+            "logging",
         )
         default_columns = (
             "access_list",
@@ -207,4 +208,5 @@ class ACLExtendedRuleTable(NetBoxTable):
             "destination_prefix",
             "destination_ports",
             "protocol",
+            "logging",
         )

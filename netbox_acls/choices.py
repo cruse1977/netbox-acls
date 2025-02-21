@@ -29,6 +29,20 @@ class ACLActionChoices(ChoiceSet):
         (ACTION_REJECT, "Reject (Reset)", "orange"),
     ]
 
+class LoggingChoices(ChoiceSet):
+    """
+    Defines the choices availble for the Access Lists plugin specific to ACL default_action.
+    """
+
+    ACTION_LOG = "log"
+    ACTION_LOGINPUT = "log-input"
+
+    CHOICES = [
+        (ACTION_LOG, "log", "blue"),
+        (ACTION_LOGINPUT, "log-input", "green"),
+    ]
+
+
 
 class ACLRuleActionChoices(ChoiceSet):
     """

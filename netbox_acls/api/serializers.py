@@ -286,6 +286,7 @@ class ACLExtendedRuleSerializer(NetBoxModelSerializer):
             "destination_ports",
             "protocol",
             "remark",
+            "logging",
         )
         brief_fields = ("id", "url", "display")
     def validate(self, data):
