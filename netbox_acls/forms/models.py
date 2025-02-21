@@ -541,7 +541,7 @@ class ACLExtendedRuleForm(NetBoxModelForm):
     )
     fieldsets = (
         FieldSet("access_list", "description", "tags", name=_('Access List Details')),
-        FieldSet("index", "action", "remark", "source_prefix", "source_ports", "destination_prefix", "destination_ports", "protocol", "logging", name=_('Rule Definition'))
+        FieldSet("index", "action", "remark", "source_prefix", "source_ports", "destination_prefix", "destination_ports", "protocol", "logging", "counter", name=_('Rule Definition'))
     )
     class Meta:
         model = ACLExtendedRule
@@ -558,6 +558,7 @@ class ACLExtendedRuleForm(NetBoxModelForm):
             "tags",
             "description",
             "logging",
+            "counter",
         )
 
         help_texts = {

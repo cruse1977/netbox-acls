@@ -158,6 +158,11 @@ class ACLExtendedRule(ACLRule):
         blank=True
     )
 
+    counter = models.CharField(
+        max_length=100,
+        blank=True
+    )
+
     def get_absolute_url(self):
         """
         The method is a Django convention; although not strictly required,
